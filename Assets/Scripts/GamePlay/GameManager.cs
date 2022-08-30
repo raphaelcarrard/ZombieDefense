@@ -134,13 +134,6 @@ public class GameManager : MonoBehaviour
     }
 
     void Update(){
-            if(Input.GetKeyDown(KeyCode.R)){
-                PlayerPrefs.SetInt("totalkill", 100);
-                PlayerPrefs.SetInt("money", 30000);
-            }
-            if(Input.GetKeyDown(KeyCode.T)){
-                PlayerPrefs.DeleteAll();
-            }
             if(Input.GetKeyDown(KeyCode.A)){
             if(PlayerController.instance.gunType == 0){
                 btnLeft.SetActive(false);
