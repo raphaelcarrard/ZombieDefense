@@ -17,15 +17,24 @@ public class MusicPlayer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        instance = this;
         audioSource = GetComponent<AudioSource>();
         StartAudio();
-        DontDestroyOnLoad(gameObject);
     }
-
     // Update is called once per frame
     void Update()
     {
+        if(Input.GetKeyDown(KeyCode.Keypad0)){
+            StopAudio();
+        }
+        if(Input.GetKeyDown(KeyCode.Keypad1)){
+            StartAudio();
+        }
+        if(Input.GetKeyDown(KeyCode.Q)){
+            StartAudio(-1);
+        }
+        if(Input.GetKeyDown(KeyCode.E)){
+            StartAudio(1);
+        }
         if(!stop) 
         {
             musicLength.value += Time.deltaTime;
@@ -43,6 +52,10 @@ public class MusicPlayer : MonoBehaviour
     public void StartAudio(int changeMusic = 0)
     {
         currentSong += changeMusic;
+        if(currentSong >= 1)
+        {
+            NGHelper.instance.unlockMedal(77589);
+        }
         if(currentSong >= clipNames.Length)
         {
             currentSong = 0;
@@ -72,10 +85,5 @@ public class MusicPlayer : MonoBehaviour
     {
         audioSource.Stop();
         stop = true;
-    }
-
-    public void DestroyGameObject()
-    {
-        Destroy(gameObject);
     }
 }

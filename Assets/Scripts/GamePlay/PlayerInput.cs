@@ -14,12 +14,10 @@ public class PlayerInput : MonoBehaviour
 
     private void Update()
     {
-        Move();
-
+        MoveInWebAndPC();
         if(Input.GetKey(KeyCode.Space)){
             Shoot();
         }
-
         if (startFill){
             fillToShoot.fillAmount += PlayerController.instance.gun[PlayerController.instance.gunType].fillAmoutValue;
             if(fillToShoot.fillAmount >= 1){
@@ -31,8 +29,30 @@ public class PlayerInput : MonoBehaviour
         }
     }
 
-    public void Move(){
-            if(Input.GetKey(KeyCode.W)){
+    public void Move(int direction){
+            PlayerController.instance.playerAnim.Play("Move"+(PlayerController.instance.gunType+1).ToString());
+            if(direction == 1){
+                if (player.transform.position.y == -0.8f){
+                    PlayerController.instance.playerSpr.sortingOrder = -3;
+                    iTween.MoveTo(player, iTween.Hash("position", new Vector3(player.transform.position.x, 0.8f, 0), "time", 0.5f, "easeType", iTween.EaseType.linear));
+                }else if (player.transform.position.y == -2.8f){
+                    PlayerController.instance.playerSpr.sortingOrder = -2;
+                    iTween.MoveTo(player, iTween.Hash("position", new Vector3(player.transform.position.x, -0.8f, 0), "time", 0.5f, "easeType", iTween.EaseType.linear));
+            }
+        }
+        else if(direction == -1){
+            if (player.transform.position.y == 0.8f){
+                    PlayerController.instance.playerSpr.sortingOrder = -2;
+                    iTween.MoveTo(player, iTween.Hash("position", new Vector3(player.transform.position.x, -0.8f, 0), "time", 0.5f, "easeType", iTween.EaseType.linear));
+                }else if (player.transform.position.y == -0.8f){
+                    PlayerController.instance.playerSpr.sortingOrder = -1;
+                    iTween.MoveTo(player, iTween.Hash("position", new Vector3(player.transform.position.x, -2.8f, 0), "time", 0.5f, "easeType", iTween.EaseType.linear));
+            }
+        }
+    }
+
+    public void MoveInWebAndPC(){
+        if(Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow)){
                 PlayerController.instance.playerAnim.Play("Move"+(PlayerController.instance.gunType+1).ToString());
                 if (player.transform.position.y == -0.8f){
                     PlayerController.instance.playerSpr.sortingOrder = -3;
@@ -42,7 +62,7 @@ public class PlayerInput : MonoBehaviour
                     iTween.MoveTo(player, iTween.Hash("position", new Vector3(player.transform.position.x, -0.8f, 0), "time", 0.5f, "easeType", iTween.EaseType.linear));
             }
         }
-            if(Input.GetKey(KeyCode.S)){
+            if(Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow)){
                 PlayerController.instance.playerAnim.Play("Move"+(PlayerController.instance.gunType+1).ToString());
                 if (player.transform.position.y == 0.8f){
                     PlayerController.instance.playerSpr.sortingOrder = -2;
@@ -53,6 +73,7 @@ public class PlayerInput : MonoBehaviour
             }
         }
     }
+                
 
     public void Shoot(){
             if(fillToShoot.fillAmount == 1){

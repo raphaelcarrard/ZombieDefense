@@ -30,9 +30,9 @@ public class IncreaseDefense{
 public class GameManager : MonoBehaviour
 {
 
-    public io.newgrounds.core ngio_core;
-
+    public bool GamePaused;
     public static GameManager instance;
+
     public Level[] level = new Level[15];
     public EnemyAttack[] enemyDam = new EnemyAttack[4];
     public EarnMoney[] moneyGot = new EarnMoney[4];
@@ -77,8 +77,10 @@ public class GameManager : MonoBehaviour
     public GameObject Earn;
     public Text moneyEarn;
 
-    [Header("Medals for Newgrounds")]
-    public Image medal1, medal2, medal3, medal4;
+    public static int countShowAds;
+
+    [Header("Medals")]
+    public bool medal1, medal2, medal3, medal4, medal5, medal6, medal7, medal8, medal9, medal10, medal11, medal12, medal13;
 
     private bool isGamePause;
     void NoticeDone(){
@@ -86,22 +88,98 @@ public class GameManager : MonoBehaviour
     }
 
     void Start() {
-        if(PlayerPrefs.GetInt("totalkill") >= 100){
-            unlockMedal(70391);
-            medal1.enabled = false;
+        if(PlayerPrefs.GetInt("day") >= 30){
+            NGHelper.instance.unlockMedal(77601);
+            PlayerPrefs.SetInt("day", 0);
+        }  
+    }
+
+    void Update(){
+        if(PlayerPrefs.GetInt("totalkill") >= 1 && medal1 == false){
+            NGHelper.instance.unlockMedal(77590);
+            medal1 = true;
         }
-        if(PlayerPrefs.GetInt("totalgun") >= 3){
-            unlockMedal(70392);
-            medal2.enabled = false;
+        if(PlayerPrefs.GetInt("totalgun") >= 1 && medal2 == false){ 
+            NGHelper.instance.unlockMedal(77591);
+            medal2 = true;
         }
-        if(PlayerPrefs.GetInt("money") >= 30000){
-            unlockMedal(70393);
-            medal3.enabled = false;
+        if(PlayerPrefs.GetInt("money") >= 7500 && medal3 == false){
+            NGHelper.instance.unlockMedal(77592);
+            medal3 = true;
         }
-        if(PlayerPrefs.GetInt("day") >= 15){
-            unlockMedal(70394);
-            medal4.enabled = false;
-        }    
+        if(PlayerPrefs.GetInt("day") >= 1 && medal4 == false){
+            NGHelper.instance.unlockMedal(77593);
+            medal4 = true;
+        }  
+        if(PlayerPrefs.GetInt("totalkill") >= 50 && medal5 == false){
+            NGHelper.instance.unlockMedal(77596);
+            medal5 = true;
+        }
+        if(PlayerPrefs.GetInt("totalgun") >= 2 && medal6 == false){ 
+            NGHelper.instance.unlockMedal(77597);
+            medal6 = true;
+        }
+        if(PlayerPrefs.GetInt("money") >= 15000 && medal7 == false){
+            NGHelper.instance.unlockMedal(77598);
+            medal7 = true;
+        }
+        if(PlayerPrefs.GetInt("day") >= 15 && medal8 == false){
+            NGHelper.instance.unlockMedal(70394);
+            medal8 = true;
+        }  
+        if(PlayerPrefs.GetInt("day") >= 20 && medal9 == false){
+            NGHelper.instance.unlockMedal(77599);
+            medal9 = true;
+        }
+        if(PlayerPrefs.GetInt("totalkill") >= 100 && medal10 == false){
+            NGHelper.instance.unlockMedal(70391);
+            medal10 = true;
+        }
+        if(PlayerPrefs.GetInt("totalgun") >= 3 && medal11 == false){ 
+            NGHelper.instance.unlockMedal(70392);
+            medal11 = true;
+        }
+        if(PlayerPrefs.GetInt("money") >= 30000 && medal12 == false){
+            NGHelper.instance.unlockMedal(70393);
+            medal12 = true;
+        }
+        if(PlayerPrefs.GetInt("day") >= 25 && medal13 == false){
+            NGHelper.instance.unlockMedal(77600);
+            medal13 = true;
+        }  
+        if(PlayerPrefs.GetInt("day") >= 30){
+            NGHelper.instance.unlockMedal(77601);
+            PlayerPrefs.SetInt("day", 0);
+        }
+        if(!GamePaused){
+            if(Input.GetKeyDown(KeyCode.P) && !winMenu.activeInHierarchy){
+                PauseGame(0);
+                GamePaused = true;
+            }
+        }
+        else
+        {
+            if(Input.GetKeyDown(KeyCode.P)){
+                ResumeGame();
+                GamePaused = false;
+            }
+        }
+        if(Input.GetKeyDown(KeyCode.O)){
+            SoundManager.instance.ChangeMusicMode();
+        }
+
+
+        if(PlayerController.instance.gunType >= 0 && Input.GetKeyDown(KeyCode.D)){
+            ChangeGun(1);
+        }
+        else if(PlayerController.instance.gunType != 0 && Input.GetKeyDown(KeyCode.A)){
+            ChangeGun(0);
+        }
+    }
+
+    public void ResumeGame(){
+        Time.timeScale = 1;
+        pauseMenu.SetActive(false);
     }
     
     private void Awake(){
@@ -128,67 +206,37 @@ public class GameManager : MonoBehaviour
         buttonShop[0].color = new Color32(255, 255, 255, 255);
         shopOption[0].SetActive(true);
         for(int i = 1; i < buttonShop.Length; i++){
-            buttonShop[i].color = new Color32(255, 255, 255, 255);
+            buttonShop[i].color = new Color32(255, 255, 255, 100);
             shopOption[i].SetActive(false);
         }
     }
 
-    void Update(){
-            if(Input.GetKeyDown(KeyCode.A)){
-            if(PlayerController.instance.gunType == 0){
-                btnLeft.SetActive(false);
-            }else if(PlayerController.instance.gunType >= 1){
-                ChangeGunLeft();
-            }
-            }
-            if(Input.GetKeyDown(KeyCode.D)){
-            if(PlayerController.instance.gunType == 3){
-                btnRight.SetActive(false);
-            }else if(PlayerController.instance.gunType <= 2){
-                ChangeGunRight();
-            }
-        }
-    }
-
-    void unlockMedal(int medal_id) {
-        io.newgrounds.components.Medal.unlock medal_unlock = new io.newgrounds.components.Medal.unlock();
-        medal_unlock.id = medal_id;
-        medal_unlock.callWith(ngio_core, onMedalUnlocked);
-    }
-
-    void onMedalUnlocked(io.newgrounds.results.Medal.unlock result) {
-        io.newgrounds.objects.medal medal = result.medal;
-        Debug.Log( "Medal Unlocked: " + medal.name + " (" + medal.value + " points)" );
-    }
-
-    public void ChangeGunRight(){
+    public void ChangeGun(int direction){
         if(PlayerInput.startFill){
             PlayerInput.startFill = false;
         }
-        if(PlayerController.instance.gunType < PlayerPrefs.GetInt("totalgun")){
-                PlayerController.instance.gunType += 1;
-                if(PlayerController.instance.gunType == PlayerPrefs.GetInt("totalgun")){
-                    btnRight.SetActive(false);
-                }
-                PlayerController.instance.playerAnim.Play("Idle" + (PlayerController.instance.gunType + 1).ToString());
-                gunIcon.sprite = gunIconSpr[PlayerController.instance.gunType];
-                btnLeft.SetActive(true);
+        if(direction == 1){
+                if(PlayerController.instance.gunType < PlayerPrefs.GetInt("totalgun")){
+                    PlayerController.instance.gunType += 1;
+                    if(PlayerController.instance.gunType == PlayerPrefs.GetInt("totalgun")){
+                        btnRight.SetActive(false);
+                    }
+                    PlayerController.instance.playerAnim.Play("Idle" + (PlayerController.instance.gunType + 1).ToString());
+                    gunIcon.sprite = gunIconSpr[PlayerController.instance.gunType];
+                    btnLeft.SetActive(true);
+            }
         }
-    }
-
-    public void ChangeGunLeft(){
-	  if(PlayerInput.startFill){
-            PlayerInput.startFill = false;
+        else if(direction == 0){
+            PlayerController.instance.gunType -= 1;
+	        PlayerController.instance.playerAnim.Play("Idle" + (PlayerController.instance.gunType + 1).ToString());
+	        gunIcon.sprite = gunIconSpr[PlayerController.instance.gunType];	
+            if(!btnRight.activeInHierarchy){
+                btnRight.SetActive(true);
+            }
+            if(PlayerController.instance.gunType == 0){
+                btnLeft.SetActive(false);
+            }
         }
-        PlayerController.instance.gunType -= 1;
-	  PlayerController.instance.playerAnim.Play("Idle" + (PlayerController.instance.gunType + 1).ToString());
-	  gunIcon.sprite = gunIconSpr[PlayerController.instance.gunType];	
-	    if(!btnRight.activeInHierarchy){
-             btnRight.SetActive(true);
-          }
-	    if(PlayerController.instance.gunType == 0){
-              btnLeft.SetActive(false);
-	    }
     }
 
     public void SetZbCount(int value){
@@ -212,22 +260,24 @@ public class GameManager : MonoBehaviour
         if(index == 0){
             Time.timeScale = 0;
             pauseMenu.SetActive(true);
+            GamePaused = true;
         }
         else if(index == 1){
             Time.timeScale = 1;
-            MusicPlayer.instance.DestroyGameObject();
             SceneManager.LoadScene("Menu");
         }
         else if(index == 2){
             Time.timeScale = 1;
-            Application.LoadLevel(Application.loadedLevel);
+            SceneManager.LoadScene("Game");
         }
         else if(index == 3){
             Time.timeScale = 1;
             pauseMenu.SetActive(false);
+            GamePaused = false;
         }
         else if(index == 4){
             isGamePause = true;
+            GamePaused = false;
             pauseMenu.SetActive(false);
             winMenu.SetActive(true);
         }
@@ -237,12 +287,11 @@ public class GameManager : MonoBehaviour
     public void GameOver(int index){
         if(index == 0){
             Time.timeScale = 1;
-            MusicPlayer.instance.DestroyGameObject();
             SceneManager.LoadScene("Menu");
         }
         else if(index == 1){
             Time.timeScale = 1;
-            Application.LoadLevel(Application.loadedLevel);
+            SceneManager.LoadScene("Game");
         }
         else if(index == 2){
             gameOverPanel.SetActive(false);
@@ -253,7 +302,7 @@ public class GameManager : MonoBehaviour
     public void NextLevel(){
         if(!isGamePause){
             Time.timeScale = 1;
-            Application.LoadLevel(Application.loadedLevel);
+            SceneManager.LoadScene("Game");
         }
         else 
         {
@@ -323,8 +372,14 @@ public class GameManager : MonoBehaviour
 
 
     public GameObject noMoney;
-    public void NoMoney(){
-        noMoney.SetActive(false);
+    public void NoMoney(int index){
+        if(index == 0){
+            noMoney.SetActive(false);
+        }
+        else if (index == 1) {
+            noMoney.SetActive(false);
+	        Time.timeScale = 0;
+        }
     }
 
     public GameObject noSkull;
@@ -408,10 +463,12 @@ public class GameManager : MonoBehaviour
         }
 
         if(PlayerPrefs.GetInt("upgrade") == 4){
+            NGHelper.instance.unlockMedal(77594);
             button1.SetActive(false);
             upgradePrice.gameObject.SetActive(false);
         }
         if(PlayerPrefs.GetInt("increase") == 4){
+            NGHelper.instance.unlockMedal(77595);
             button2.SetActive(false);
             increasePrice.gameObject.SetActive(false);
         }

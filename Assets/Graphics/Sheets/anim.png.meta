@@ -36,7 +36,7 @@ TextureImporter:
       213: -8215609290913299286
     second: blood_3
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -53,10 +53,12 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
+    flipGreenChannel: 0
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -95,6 +97,8 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -182,6 +186,18 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -295,7 +311,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: e486ebd1e1a29f110800000000000000
-      internalID: 1295112676682131534
+      internalID: -1599040523665989933
       vertices: []
       indices: 
       edges: []
@@ -426,6 +442,27 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: Move btn 2
+      rect:
+        serializedVersion: 2
+        x: 1150
+        y: 670
+        width: 74
+        height: 172
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a34cf8ac93998c44482898ef06c64623
+      internalID: -1444303825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -436,9 +473,21 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      Move btn 2: -1444303825
+      anim_5: 2424371249168836377
+      anim_1: 5405359409141888313
+      blood_3: -8215609290913299286
+      blood_0: -4448814254425493006
+      anim_4: -1599040523665989933
+      Left Arr Btn: 5434487472335201720
+      anim_3: -8425283037093626769
+      anim_2: -8673657404420746562
+      blood_1: -3696667232445491719
+      blood_2: -5479670117576336480
+      anim_0: -6012062879417603453
   spritePackingTag: 
   pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 

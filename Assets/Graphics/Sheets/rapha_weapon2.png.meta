@@ -63,7 +63,7 @@ TextureImporter:
       213: 1506904531310647623
     second: idle2_5
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -80,10 +80,12 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
+    flipGreenChannel: 0
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -122,6 +124,8 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -209,6 +213,18 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -652,9 +668,29 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      shoot2_1: 7687197032330273154
+      idle2_3: -2735796316249407621
+      shoot2_4: 2079881441072654573
+      Move2_0: 3817521643789127885
+      shoot2_2: 8412481346455519888
+      shoot2_5: 1069260240451053752
+      idle2_4: 4174311036468562912
+      shoot2_0: -7547934784392533853
+      idle2_6: 74105751794290967
+      idle2_2: -5077614614066712449
+      Move2_3: 7777896690042128342
+      Move2_1: -4546971362905780323
+      Move2_2: -239926776188090349
+      rapha_weapon2_0: 7175818617632869273
+      idle2_1: -4848794280607186686
+      idle2_5: 1506904531310647623
+      idle2_9: 6903158708916581915
+      idle2_8: 2832640217670190922
+      shoot2_3: 7642753150120745536
+      idle2_7: 1344292991758394343
   spritePackingTag: 
   pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 

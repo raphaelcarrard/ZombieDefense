@@ -120,7 +120,7 @@ TextureImporter:
       213: 3749761293788612782
     second: zb4_Attack_0
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -137,10 +137,12 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
+    flipGreenChannel: 0
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -179,6 +181,8 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -266,6 +270,18 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -1108,9 +1124,48 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      zb4_Attack_6: 3358176858410188637
+      zb4_Dead_0: 7363274604024788424
+      zb4_Dead_11: -1133354658120098376
+      zb4_Dead_7: 7423763702967393681
+      zb4_Attack_3: -202842574949721299
+      zb4_Move_9: 1516628927993748045
+      zb4_Move_4: 6243475139868319813
+      zb4_Dead_14: 3563706599163959950
+      zb4_Dead_8: 7076842411521483282
+      zb4_Move_1: 7647490068461058363
+      zb4_Move_11: -6566918287294266261
+      zb4_Dead_13: -6681463675911283657
+      zb4_Dead_15: -3292932760040508830
+      zb4_Dead_6: 1701521964913717312
+      zb4_Attack_0: 3749761293788612782
+      zb4_Dead_4: 6629522744773526725
+      zb4_Dead_12: -3218516745065603046
+      zb4_Attack_4: -2872236835189827112
+      zb4_Dead_3: -716023936059341282
+      zb4_Attack_7: -6048997653292807440
+      zb4_Move_3: -5744778087794719975
+      zb4_Move_0: -4129036458558825435
+      zb4_Dead_5: -8094182877033869849
+      zb4_Dead_9: 4150441844891621450
+      zb4_Attack_5: 8618148369220441954
+      zb4_Dead_1: 2931617285775090462
+      zb4_Move_13: 7943656372603773728
+      zb4_Move_2: -8738915568307325681
+      zb4_Attack_8: -9180604677369671823
+      zb4_Attack_2: -7431355927684466778
+      zb4_Move_10: 7059115115509265006
+      zb4_Move_7: 3957102534408049998
+      zb4_Move_6: 6441033118466597156
+      zb4_Move_12: -5235302382946746806
+      zb4_Dead_10: 4547510899184341034
+      zb4_Move_8: -8468279953307047809
+      zb4_Dead_2: -6220049644952581308
+      zb4_Attack_1: 7666123998094751052
+      zb4_Move_5: 3880961188776093776
   spritePackingTag: 
   pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 

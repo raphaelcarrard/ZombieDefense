@@ -87,7 +87,7 @@ TextureImporter:
       213: -7901035562529123290
     second: zb2_attack_7
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -104,10 +104,12 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
+    flipGreenChannel: 0
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -146,6 +148,8 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -233,6 +237,18 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -844,9 +860,37 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      zb2_Move_2: -4320178323389086967
+      zb2_attack_2: -7569134729608397701
+      zb2_dead_13: -7058177662901495218
+      zb2_Move_5: -4456857827307810714
+      zb2_dead_1: -753695785708676646
+      zb2_attack_4: -9094438897224914934
+      zb2_dead_4: -4048253974459809026
+      zb2_dead_9: -2808669619797315584
+      zb2_dead_10: -5497220806396259876
+      zb2_attack_0: 8305437699957732700
+      zb2_dead_0: -1184417353427278574
+      zb2_attack_3: -8672219003628083507
+      zb2_dead_7: 4181421044473748349
+      zb2_dead_8: -1440579629482094099
+      zb2_dead_2: 8584422975299646160
+      zb2_dead_5: -3355420031701394032
+      zb2_dead_6: 5512041965552379265
+      zb2_Move_1: 5522926159485588641
+      zb2_dead_3: 9109498726559664768
+      zb2_Move_4: -4161019823675113019
+      zb2_dead_12: -1180982667535785267
+      zb2_Move_0: -393920336956811083
+      zb2_attack_7: -7901035562529123290
+      zb2_attack_6: -173733057026362495
+      zb2_Move_3: -7265670673993765472
+      zb2_dead_11: 7716803236066437720
+      zb2_attack_1: 4376582230083279328
+      zb2_attack_5: 8192342700802776278
   spritePackingTag: 
   pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 

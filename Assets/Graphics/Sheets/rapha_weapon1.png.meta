@@ -96,7 +96,7 @@ TextureImporter:
       213: -8914819196522481183
     second: rapha1-idle4
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -113,10 +113,12 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
+    flipGreenChannel: 0
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -155,6 +157,8 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -242,6 +246,18 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -916,9 +932,40 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      rapha1-idle9: -557668805386212896
+      shoot4: -6815896405119600743
+      rapha1-idle11: -6890091452048601318
+      rapha1-idle2: 1096893219491066345
+      rapha1-shoot3: 2528065631879477066
+      rapha1-idle5: 2719828264610726682
+      rapha1-shoot9: 3564473347324676941
+      shoot6: -8208419666131796549
+      rapha1-idle7: 7664400609285171849
+      rapha1-idle4: -8914819196522481183
+      rapha1-shoot10: -2539717843508202096
+      rapha1-idle12: -190156763473421245
+      rapha1-shoot1: -2212740880613191129
+      rapha1-shoot5: 8702964912568125803
+      rapha1-shoot6: -6635161824674678736
+      rapha1-shoot7: -8420784614003355183
+      rapha1-idle3: 3959628859339398577
+      rapha1-idle6: 369497589773309095
+      rapha1-idle8: 8107599573382344704
+      rapha1-idle10: -2792824773652987404
+      rapha1-idle0: -5531135783394399407
+      shoot1: 4621891902974780174
+      shoot3: -4377027537227185842
+      rapha1-idle1: 2702494755839358690
+      shoot5: 397228376770771709
+      shoot2: 1721969946016381320
+      rapha1-shoot2: -2856739331823775755
+      rapha1-shoot0: 6347089499851802862
+      shoot0: -7207433362996250415
+      rapha1-shoot4: 3164357967916074338
+      rapha1-shoot8: -8274643699724485264
   spritePackingTag: 
   pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 

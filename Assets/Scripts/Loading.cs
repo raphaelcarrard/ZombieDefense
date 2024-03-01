@@ -13,6 +13,7 @@ public class Loading : MonoBehaviour
 
     IEnumerator Tempo(){
         yield return new WaitForSeconds(5);
+        NGHelper.instance.unlockMedal(77588);
         SceneManager.LoadScene("Menu");
     }
 }

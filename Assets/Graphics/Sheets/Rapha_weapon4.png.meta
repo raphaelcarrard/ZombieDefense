@@ -63,7 +63,7 @@ TextureImporter:
       213: -5574940600007219775
     second: Idle4_9
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -80,10 +80,12 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
+    flipGreenChannel: 0
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -122,6 +124,8 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -209,6 +213,18 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -652,9 +668,29 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      Shoot4_3: -8018253486713710385
+      Move4_0: -445769288330484219
+      Idle4_6: -745005230628171429
+      Idle4_9: -5574940600007219775
+      Move4_1: 4784497245453576349
+      Shoot4_1: 5268210248428176000
+      Shoot4_2: -2442518968583962408
+      Shoot4_4: -1829259130124512820
+      Shoot4_5: -4073151356956083395
+      Idle4_2: -1988558760665472344
+      Idle4_8: -8033286342034532481
+      Idle4_7: 5073204264047952636
+      Idle4_1: -2805070183896268730
+      Move4_3: -2880799329918761943
+      Move4_2: 5770485685416461010
+      Idle4_3: -3125077913674081060
+      Shoot4_0: 4718985751777714350
+      Idle4_4: 6885295345251831540
+      Idle4_5: -4984780257173536814
+      Idle4_0: 594336468601467040
   spritePackingTag: 
   pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 

@@ -24,12 +24,7 @@ public class SoundManager : MonoBehaviour
         source.loop = true;
     }
 
-    void Update(){
-	ChangeMusicMode();
-    }
-
     public void ChangeMusicMode(){
-	if(Input.GetKeyDown(KeyCode.M)){
 	  switch(PlayerPrefs.GetInt("music")){
             case 0:
                 PlayerPrefs.SetInt("music", 1);
@@ -39,18 +34,15 @@ public class SoundManager : MonoBehaviour
                 break;   
         }
         LoadMusic();
-	}
     }
 
     public void LoadMusic(){
         switch(PlayerPrefs.GetInt("music")){
             case 0:
-                MusicPlayer.instance.StartAudio();
                 musicImage.sprite = unmute;
                 source.volume = 1;
                 break;
             case 1:
-                MusicPlayer.instance.StopAudio();
                 musicImage.sprite = mute;
                 source.volume = 0;
                 break; 

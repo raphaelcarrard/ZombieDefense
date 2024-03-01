@@ -183,21 +183,25 @@ public class AIController : MonoBehaviour {
 
     private void OnCollisionStay2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "box")
-        {
-            aiAnim.Play("zbAttack"+(type+1).ToString());
+        if (!isDead){
+            if (collision.gameObject.tag == "box")
+            {
+                aiAnim.Play("zbAttack"+(type+1).ToString());
 
-            canMove = false;
+                canMove = false;
+            }
         }
     }
 
     private void OnCollisionExit2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "box")
-        {
-            aiAnim.Play("zbAttack" + (type + 1).ToString());
+        if (!isDead){
+            if (collision.gameObject.tag == "box")
+            {
+                aiAnim.Play("zbAttack"+(type+1).ToString());
 
-            canMove = true;
+                canMove = true;
+            }
         }
     }
 }

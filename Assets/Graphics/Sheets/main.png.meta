@@ -165,7 +165,7 @@ TextureImporter:
       213: -2970236601097821341
     second: health bar 2
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -182,10 +182,12 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
+    flipGreenChannel: 0
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMipmapLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -224,6 +226,8 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -235,6 +239,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -247,6 +252,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -259,6 +265,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -271,6 +278,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -283,6 +291,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -295,6 +304,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -307,6 +317,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -319,6 +330,20 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
@@ -1374,6 +1399,111 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: Start btn
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 382
+        width: 212
+        height: 642
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88e2671505d6c0b4699012b664bd6ae8
+      internalID: 784412976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Exit btn
+      rect:
+        serializedVersion: 2
+        x: 233
+        y: 874
+        width: 143
+        height: 139
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 973f7aa12e1e6444b832c39fc4e68abe
+      internalID: -1513233636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Move btn
+      rect:
+        serializedVersion: 2
+        x: 754
+        y: 400
+        width: 73
+        height: 172
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ae179030cf3a6c4abf32d3fa69a9197
+      internalID: 962505479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Award50
+      rect:
+        serializedVersion: 2
+        x: 393
+        y: 867
+        width: 163
+        height: 152
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33873e08264da3e43a8d97e2046fa92c
+      internalID: -843563030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Award51
+      rect:
+        serializedVersion: 2
+        x: 563
+        y: 867
+        width: 162
+        height: 152
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e324ed55921f85544803b2a3896d0438
+      internalID: 1444758531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -1384,9 +1514,64 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-  spritePackingTag: 
+    nameFileIdTable:
+      Award10: 208807673859263030
+      Award11: 5352443464356003732
+      Award20: 3909648586501770998
+      Award21: -5176357189896373642
+      Award30: 4417013908797395588
+      Award31: 3772943146004346442
+      Award40: 3480303137671107091
+      Award41: 8822046848726840433
+      Award50: -843563030
+      Award51: 1444758531
+      DF1: -7391052331155610965
+      DF2: -4450130315305721983
+      DF20: -2383928302123544374
+      DF21: 7861754384991953135
+      DF22: 4402616593755278890
+      DF23: -8593881997715226929
+      DF3: 8340820919575296861
+      DF30: -5822504582819470748
+      DF31: 2115953401773755415
+      DF32: -5740370658817850991
+      DF33: 4758308414818830458
+      DF4: 2256837038232780151
+      DF40: -2517064400123714365
+      DF42: -6358107265026801554
+      DF43: -5963530938050980348
+      DF44: -3630786304887842997
+      Exit btn: -1513233636
+      IM1: -4411294792411142219
+      IM2: -272595228613396665
+      IM3: 6180139991002460169
+      IM4: 7669415146756810826
+      Move btn: 962505479
+      Start btn: 784412976
+      award: -8324238435131199554
+      baotai: -2604457744190663978
+      gun icon 0: -1281193582452421617
+      gun icon 1: -533561472294168478
+      gun icon 2: -1443072342100420003
+      gun icon 3: -6524602446460829420
+      health bar 1: 8735709874650358707
+      health bar 2: -2970236601097821341
+      main_0: 1420670631342824008
+      main_1: 4437545129933235585
+      main_2: -317505601854203814
+      menu: -6966181041943207259
+      ok: 3182223083648015374
+      pauseText: 5592898353888408623
+      retrybtn: 4160096744251484597
+      right arr btn: 6196038890525974413
+      shoot btn: -7783813424544337531
+      shoot btn empty: 6064121467051502045
+      shop: 1762561733409218948
+      up: -2853903364276964733
+      upgrade: -2602586883131143821
+      upnot: -3041636434886049688
+  mipmapLimitGroupName: 
   pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 
